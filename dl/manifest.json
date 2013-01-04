@@ -1,0 +1,18 @@
+{
+  "name": "Fullsize Image Downloader",
+  "description": "Adds fullsize image download link to google image search",
+  "version": "0.6",
+  "permissions": ["contextMenus","tabs","downloads","<all_urls>"],
+  "icons": { 	"16": "download16.png",
+			  "48": "download48.png",
+			  "128": "download128.png" },
+  "background": {
+    "scripts": ["sample.js"]
+  },
+  "content_scripts": [{
+	  "all_frames": true,
+      "matches": ["<all_urls>"],
+      "js": ["cs.js"]
+  }],
+  "manifest_version": 2
+}
